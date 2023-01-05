@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('code') {
       steps {
+        sh 'echo $whoami'
         git(url: 'https://github.com/vaideek/java-maven.git', branch: 'main')
       }
     }
